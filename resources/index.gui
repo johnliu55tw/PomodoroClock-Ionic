@@ -1,0 +1,50 @@
+<svg>
+  <section>
+    <arc x="50%-110" y="50%-110" width="220" height="220" fill="fb-extra-dark-gray"
+      arc-width="10" start-angle="0" sweep-angle="360"/>
+    <arc id="countdown-arc" x="50%-110" y="50%-110" width="220" height="220" fill="fb-red"
+      arc-width="10" start-angle="0" sweep-angle="333.333"/>
+
+    <text id="countdown-counter" font-family="System-Bold" font-size="60" text-anchor="middle" x="50%" y="50%+15" fill="white">
+      24:59
+    </text>
+
+    <text id="interval-counter" font-family="System-Bold" font-size="32" text-anchor="middle" x="50%" y="30%" fill="white">
+      11/12
+    </text>
+
+    <text id="time-text" font-family="System-Regular" font-size="28" text-anchor="middle" x="50%" y="77%" fill="white">
+      22:38
+    </text>
+  </section>
+
+  <!--'buttom-left' area.-->
+  <svg id="stat-button" class="button stat" x="0" y="50%" width="33%" height="50%" pointer-events="visible">
+    <rect class="button"/>
+  </svg>
+
+  <svg>
+    <!-- TOP LEFT -->
+    <use id="btn-x" href="#combo-button-upper-left" fill="fb-white">
+      <set href="combo-button-icon" attributeName="href" to="icons/x.png"/>
+      <set href="combo-button-icon-press" attributeName="href" to="icons/x_press.png"/>
+    </use>
+    <!-- TOP RIGHT -->
+    <use id="btn-skip" href="#combo-button-upper-right" fill="fb-white">
+      <set href="combo-button-icon" attributeName="href" to="icons/skip.png"/>
+      <set href="combo-button-icon-press" attributeName="href" to="icons/skip_press.png"/>
+    </use>
+    <!-- BOTTOM RIGHT -->
+    <use id="btn-toggle" href="#combo-button-lower-right" fill="fb-white">
+      <set href="combo-button-icon" attributeName="href" to="icons/play.png"/>
+      <set href="combo-button-icon-press" attributeName="href" to="icons/play_press.png"/>
+    </use>
+    <!-- BOTTOM LEFT - Not used
+    <use id="btn-bl" href="#combo-button-lower-left" fill="fb-white">
+      <set href="combo-button-icon" attributeName="href" to="headphone.png"/>
+      <set href="combo-button-icon-press" attributeName="href" to="headphone_press.png"/>
+      <set href="combo-button-stroke" attributeName="display" to="inline"/>
+    </use>
+    -->
+  </svg>
+</svg>
