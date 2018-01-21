@@ -1,14 +1,14 @@
 {
   "fitbit": {
-    "appUUID": "43061ece-2b45-4c66-97b4-5ee7756dd1b2",
-    "appType": "app",
-    "appDisplayName": "Pomodoro",
+    "appUUID": "9d263b17-3c4f-4db8-b5c9-1252e49dac23",
+    "appType": "clockface",
+    "appDisplayName": "PomodoroClock",
     "iconFile": "resources/icon.png",
-    "wipeColor": "#607d8b",
+    "wipeColor": "#f44336",
     "requestedPermissions": [],
     "i18n": {
       "en": {
-        "name": "Pomodoro"
+        "name": "PomodoroClock"
       }
     }
   }
