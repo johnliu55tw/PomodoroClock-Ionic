@@ -1,6 +1,7 @@
 import document from 'document'
 import * as utils from '../common/utils.js'
 import {PomoIntvlState, PomoTimerState} from 'pomodoro'
+import {DatetimeWidgetState} from 'datetime-widget'
 
 /* Helper functions for getting the elements */
 let timeText = () => document.getElementById('time-text')
@@ -41,10 +42,26 @@ function getIntvlStateColor (intvlState) {
   return color
 }
 
-export function datetime (date) {
-  /* Takes a Date object to update time related views */
-  timeText().text = utils.toMonoDigits(date.getHours()) + ':' +
-                    utils.toMonoDigits(date.getMinutes())
+export function datetime (dtWidget, date) {
+  if (!date) {
+    date = new Date()
+  }
+  switch (dtWidget.state) {
+    case DatetimeWidgetState.time:
+      timeText().text = utils.toMonoDigits(date.getHours()) + ':' +
+                        utils.toMonoDigits(date.getMinutes())
+      break
+    case DatetimeWidgetState.date:
+      timeText().text = utils.toMonoDigits(date.getMonth() + 1) + '-' +
+                        utils.toMonoDigits(date.getDate())
+      break
+    case DatetimeWidgetState.day:
+      timeText().text = date.toString().substr(0, 3).toUpperCase()
+      break
+    case DatetimeWidgetState.none:
+      timeText().text = ''
+      break
+  }
 }
 
 export function pomodoro (pomoTimer) {
