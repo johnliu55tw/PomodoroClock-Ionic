@@ -2,6 +2,16 @@ import document from 'document'
 import * as utils from '../common/utils.js'
 import {PomoIntvlState, PomoTimerState} from 'pomodoro'
 
+/* Helper functions for getting the elements */
+let timeText = () => document.getElementById('time-text')
+let pomoTime = () => document.getElementById('countdown-counter')
+let pomoSets = () => document.getElementById('interval-counter')
+let pomoCircle = () => document.getElementById('countdown-arc')
+
+let btnToggleIcon = () => document.getElementById('toggle-icon')
+let btnReset = () => document.getElementById('btn-x')
+let btnSkip = () => document.getElementById('btn-skip')
+
 function getIntvlStateColor (intvlState) {
   let color = null
   switch (intvlState) {
@@ -80,16 +90,6 @@ export function pomodoro (pomoTimer) {
       break
   }
 }
-
-/* Helper functions for getting the elements */
-let timeText = () => document.getElementById('time-text')
-let pomoTime = () => document.getElementById('countdown-counter')
-let pomoSets = () => document.getElementById('interval-counter')
-let pomoCircle = () => document.getElementById('countdown-arc')
-
-let btnToggleIcon = () => document.getElementById('toggle-icon')
-let btnReset = () => document.getElementById('btn-x')
-let btnSkip = () => document.getElementById('btn-skip')
 
 /* Not used
 let btnTl = () => document.getElementById('btn-tl')
