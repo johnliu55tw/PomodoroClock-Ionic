@@ -41,7 +41,7 @@
   </svg>
 
   <!--'buttom-left' area.-->
-  <svg id="stat-button" class="button stat" x="0" y="50%" width="33%" height="50%" pointer-events="visible">
+  <svg id="stat-button" class="button stat" x="0" y="125" width="116" height="125" pointer-events="visible">
     <rect class="button"/>
     <text id="time-text" font-family="System-Regular" font-size="30" text-anchor="start" x="12" y="100%-22" width="100%" height="30" fill="white">
       22:38
@@ -49,7 +49,7 @@
   </svg>
 
   <!--'buttom-center' area.-->
-  <svg id="btn-toggle" class="button toggle" x="33%" y="50%" width="33%" height="50%" pointer-events="visible">
+  <svg id="btn-toggle" class="button toggle" x="116" y="125" width="116" height="125" pointer-events="visible">
     <rect class="button"/>
     <image id="toggle-icon" class="toggle play icon" x="50%-23" y="50%-23" height="46" width="46" href="icons/play.png"/>
     <image id="toggle-icon-press" class="toggle play icon" x="50%-23" y="50%-23" height="46" width="46" href="icons/play_press.png" visibility="hidden"/>
