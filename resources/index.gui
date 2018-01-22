@@ -52,6 +52,7 @@
   <svg id="btn-toggle" class="button toggle" x="33%" y="50%" width="33%" height="50%" pointer-events="visible">
     <rect class="button"/>
     <image id="toggle-icon" class="toggle play icon" x="50%-23" y="50%-23" height="46" width="46" href="icons/play.png"/>
+    <image id="toggle-icon-press" class="toggle play icon" x="50%-23" y="50%-23" height="46" width="46" href="icons/play_press.png" visibility="hidden"/>
   </svg>
 
 </svg>

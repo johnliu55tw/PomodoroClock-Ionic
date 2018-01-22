@@ -8,9 +8,20 @@ let pomoTime = () => document.getElementById('countdown-counter')
 let pomoSets = () => document.getElementById('interval-counter')
 let pomoCircle = () => document.getElementById('countdown-arc')
 
+let btnToggle = () => document.getElementById('btn-toggle')
 let btnToggleIcon = () => document.getElementById('toggle-icon')
+let btnTogglePressIcon = () => document.getElementById('toggle-icon-press')
 let btnReset = () => document.getElementById('btn-x')
 let btnSkip = () => document.getElementById('btn-skip')
+
+btnToggle().addEventListener('mousedown', () => {
+  btnToggleIcon().style.visibility = 'hidden'
+  btnTogglePressIcon().style.visibility = 'visible'
+})
+btnToggle().addEventListener('mouseup', () => {
+  btnToggleIcon().style.visibility = 'visible'
+  btnTogglePressIcon().style.visibility = 'hidden'
+})
 
 function getIntvlStateColor (intvlState) {
   let color = null
@@ -64,6 +75,7 @@ export function pomodoro (pomoTimer) {
   switch (pomoTimer.timerState) {
     case PomoTimerState.running:
       btnToggleIcon().href = 'icons/pause.png'
+      btnTogglePressIcon().href = 'icons/pause_press.png'
       pomoTime().style.fill = color
       pomoSets().style.fill = color
       pomoCircle().style.fill = color
@@ -73,6 +85,7 @@ export function pomodoro (pomoTimer) {
 
     case PomoTimerState.paused:
       btnToggleIcon().href = 'icons/play.png'
+      btnTogglePressIcon().href = 'icons/play_press.png'
       pomoTime().style.fill = color
       pomoSets().style.fill = color
       pomoCircle().style.fill = 'gray'
@@ -82,6 +95,7 @@ export function pomodoro (pomoTimer) {
 
     case PomoTimerState.idle:
       btnToggleIcon().href = 'icons/play.png'
+      btnTogglePressIcon().href = 'icons/play_press.png'
       pomoTime().style.fill = 'gray'
       pomoSets().style.fill = 'gray'
       pomoCircle().style.fill = 'gray'
