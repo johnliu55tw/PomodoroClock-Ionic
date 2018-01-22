@@ -81,7 +81,7 @@ buttons.skip().addEventListener('activate', (evt) => {
   views.pomodoro(pomo)
 })
 
-buttons.toggle().addEventListener('activate', (evt) => {
+buttons.toggle().addEventListener('click', (evt) => {
   console.log('Toggle btn pressed')
   pomo.toggle()
   pomo.update()
