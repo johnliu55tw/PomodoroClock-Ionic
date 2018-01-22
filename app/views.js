@@ -2,12 +2,14 @@ import document from 'document'
 import * as utils from '../common/utils.js'
 import {PomoIntvlState, PomoTimerState} from 'pomodoro'
 import {DatetimeWidgetState} from 'datetime-widget'
+import {StatWidgetState} from 'stat-widget'
 
 /* Helper functions for getting the elements */
 let timeText = () => document.getElementById('time-text')
 let pomoTime = () => document.getElementById('countdown-counter')
 let pomoSets = () => document.getElementById('interval-counter')
 let pomoCircle = () => document.getElementById('countdown-arc')
+let statText = () => document.getElementById('stat-text')
 
 let btnToggle = () => document.getElementById('btn-toggle')
 let btnToggleIcon = () => document.getElementById('toggle-icon')
@@ -60,6 +62,21 @@ export function datetime (dtWidget, date) {
       break
     case DatetimeWidgetState.none:
       timeText().text = ''
+      break
+  }
+}
+
+export function stat (statWidget) {
+  switch (statWidget.state) {
+    case StatWidgetState.hrm:
+      if (statWidget.hrm.heartRate) {
+        statText().text = statWidget.hrm.heartRate.toString()
+      } else {
+        statText().text = '--'
+      }
+      break
+    case StatWidgetState.none:
+      statText().text = ''
       break
   }
 }

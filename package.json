@@ -5,7 +5,9 @@
     "appDisplayName": "PomodoroClock",
     "iconFile": "resources/icon.png",
     "wipeColor": "#f44336",
-    "requestedPermissions": [],
+    "requestedPermissions": [
+      "access_heart_rate"
+    ],
     "i18n": {
       "en": {
         "name": "PomodoroClock"

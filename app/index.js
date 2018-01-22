@@ -5,6 +5,7 @@ import * as buttons from 'buttons'
 import * as views from 'views'
 import {PomodoroTimer} from 'pomodoro'
 import {DatetimeWidget} from 'datetime-widget'
+import {StatWidget} from 'stat-widget'
 import {CONFIG} from 'config'
 import {me} from 'appbit'
 
@@ -55,10 +56,14 @@ pomo.onnotify = () => {
 // Load the DatetimeWidget
 let dtWidget = new DatetimeWidget()
 
+// Load the StatWidget
+let statWidget = new StatWidget()
+
 clock.granularity = 'seconds'
-// Update current time
+// Update current time and stat
 clock.addEventListener('tick', (evt) => {
   views.datetime(dtWidget, evt.date)
+  views.stat(statWidget)
 })
 // Update Pomodoro view
 clock.addEventListener('tick', (evt) => {
@@ -96,4 +101,10 @@ buttons.datetime().addEventListener('click', (evt) => {
   console.log('datetime')
   dtWidget.nextState()
   views.datetime(dtWidget)
+})
+
+buttons.stat().addEventListener('click', (evt) => {
+  console.log('stat')
+  statWidget.nextState()
+  views.stat(statWidget)
 })

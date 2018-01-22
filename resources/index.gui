@@ -55,4 +55,11 @@
     <image id="toggle-icon-press" class="toggle play icon" x="50%-23" y="50%-23" height="46" width="46" href="icons/play_press.png" visibility="hidden"/>
   </svg>
 
+  <!--'buttom-right' area.-->
+  <svg id="btn-stat" class="button stat" x="232" y="125" width="116" height="125" pointer-events="visible">
+    <rect class="button"/>
+    <text id="stat-text" font-family="System-Regular" font-size="30" text-anchor="end" x="100%-12" y="100%-22" width="100%" height="30" fill="white">
+      888
+    </text>
+  </svg>
 </svg>
