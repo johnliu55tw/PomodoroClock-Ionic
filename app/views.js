@@ -114,7 +114,7 @@ export function pomodoro (pomoTimer) {
       pomoSets().style.fill = color
       pomoCircle().style.fill = color
       btnReset().style.visibility = 'hidden'
-      btnSkip().style.visibility = 'visible'
+      btnSkip().style.visibility = 'hidden'
       break
 
     case PomoTimerState.paused:
