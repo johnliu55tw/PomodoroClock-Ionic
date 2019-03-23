@@ -1,8 +1,9 @@
 import document from 'document'
-import * as utils from '../common/utils.js'
-import {PomoIntvlState, PomoTimerState} from 'pomodoro'
-import {DatetimeWidgetState} from 'datetime-widget'
-import {StatWidgetState} from 'stat-widget'
+
+import * as utils from '../common/utils'
+import {PomoIntvlState, PomoTimerState} from './pomodoro'
+import {DatetimeWidgetState} from './datetime-widget'
+import {StatWidgetState} from './stat-widget'
 
 /* Helper functions for getting the elements */
 let timeText = () => document.getElementById('time-text')

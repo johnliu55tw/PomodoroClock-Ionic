@@ -1,13 +1,14 @@
 import clock from 'clock'
 import {vibration} from 'haptics'
 import {display} from 'display'
-import * as buttons from 'buttons'
-import * as views from 'views'
-import {PomodoroTimer} from 'pomodoro'
-import {DatetimeWidget} from 'datetime-widget'
-import {StatWidget} from 'stat-widget'
-import {CONFIG} from 'config'
 import {me} from 'appbit'
+
+import * as buttons from './buttons'
+import * as views from './views'
+import {PomodoroTimer} from './pomodoro'
+import {DatetimeWidget} from './datetime-widget'
+import {StatWidget} from './stat-widget'
+import {CONFIG} from './config'
 
 /* DEBUGGING: Read and show stored pomo file. Uncomment this part if you need to
  * inspect the stored file.
